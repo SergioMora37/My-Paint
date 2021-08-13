@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Drawing on Canvas</title>
+    <style type="text/css">
+        #main{
+            width: 800px; 
+            margin: auto; 
+            box-sizing: border-box;
+            padding: 20px;
+            border:3px solid black;
+            background-color: white; 
+            font-family: Arial, Helvetica, sans-serif; font-size: 15px; 
+            border-radius: 40px;
+    }
+       
+        #area_dibujo{ 
+            border-radius: 10px;
+            border:3px solid black;
+            margin-top: 20px;
+        }
+
+        body{
+            background-image: url("https://c.wallhere.com/photos/e3/43/shapes_background_bright_multi_colored-1021982.jpg!d");
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+             background-size: cover;
+        } 
+
+        h1{
+            color: white;
+            text-shadow: 1px 1px black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        canvas{
+            background-color: white;
+        }
+
+        p{
+            color: white;
+            text-shadow: 1px 1px black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        #botoncito{
+            border-radius: 5px;
+        }
+    
+    </style>
+</head>
+<body>
+    <center>
+        <h1>My Paint</h1>
+    <section id = "main">   
+        Artist, choose the color of your strokes:<input  type= "color" id = "color" oninput = "defcolor(this.value);"/>
+        Choose the width of you stroke:<input type="range" onchange="ancho(this)" max="40" min="1" value="1" id="ancho_trazo"/>
+        <input type = "button" id = "botoncito" value ="Clean"/>
+    </section>
+    <canvas width="800", height="500" id="area_dibujo"></canvas>
+    <p><strong>Author: Sergio Mora 
+        <A HREF="https://www.linkedin.com/in/sergio-mora-345983161"> LinkedIn </A>
+    </strong></p>
+    </center>
+    <script type="text/javascript" src="MyPaint.js"></script>
+</body>
+</html>
