@@ -23,8 +23,9 @@ function clearLienzo(){
     papel.clearRect(0, 0, 800, 500);
 }
 
-function ancho(){
+function ancho(value){
     papel.lineWidth = anchito.value;
+    document.getElementById("ancho_trazo").innerHTML = value;
 }
 
 function dibujarLinea(evento)
@@ -33,7 +34,7 @@ function dibujarLinea(evento)
     y = evento.layerY;
     if(estado == 1){
         papel.lineTo(x, y);
-        console.log("dibujando");
+        console.log("Dibujando");
         papel.stroke();
         console.log( "Posicion x" + x + " Posicion y" + y);
         }
@@ -45,12 +46,12 @@ lienzo.addEventListener("mousedown", function()
     estado = 1;
     papel.beginPath();
     papel.moveTo(x, y);
-    console.log("Mouse presionado");
+    console.log("Mouse Presionado");
 });
 
 lienzo.addEventListener("mouseup", function()
 {
     estado = 0;
-    console.log("Mouse soltado");
+    console.log("Mouse Soltado");
     papel.closePath();
 });
